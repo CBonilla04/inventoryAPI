@@ -4,9 +4,9 @@ namespace Inventario.Models{
         List<Lot> getAll();
         Lot getById(int id);
 
-        void insert(Lot item);
-        void remove(int id);
+        string insert(Lot item);
+        string remove(int id);
 
-        void update(Lot item);  
+        string update(Lot item);  
     }
 }

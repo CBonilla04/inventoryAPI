@@ -13,8 +13,28 @@ public class LotController : Controller
         _lotContext = lotContext;
     }
 
+    [HttpPost("insertLot")]
+    public string insertProduct([FromBody]Lot item){
+        return _lotContext.insert(item);
+    }
+
     [HttpGet("getAll")]
     public List<Lot> getAll(){
         return _lotContext.getAll();
+    }
+
+    [HttpGet("getById/{idLot}")]
+    public Lot getById(int idLot){
+        return _lotContext.getById(idLot);
+    }
+
+    [HttpDelete("delete/{idLot}")]
+    public string delete(int idLot){
+        return _lotContext.remove(idLot);
+    }
+
+    [HttpPut("update")]
+    public string update([FromBody] Lot item){
+        return _lotContext.update(item);
     }
 }
