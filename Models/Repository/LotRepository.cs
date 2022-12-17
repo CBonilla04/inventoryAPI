@@ -68,8 +68,8 @@ namespace Inventario.Models{
                 command.CommandText = "INSERT INTO Lot (`lotNumber`,`dueDate`,`creationDate`) VALUES (?lotNumber,?dueDate,?creationDate)";
                 // to avoid sql injection
                 command.Parameters.Add("?lotNumber", MySqlDbType.String).Value = item.lotNumber; 
-                command.Parameters.Add("?dueDate", MySqlDbType.String).Value = item.dueDate; 
-                command.Parameters.Add("?creationDate", MySqlDbType.String).Value = item.creationDate; 
+                command.Parameters.Add("?dueDate", MySqlDbType.DateTime).Value = item.dueDate; 
+                command.Parameters.Add("?creationDate", MySqlDbType.DateTime).Value = item.creationDate; 
                 command.Connection = conexion;
                 try
                 {
@@ -115,12 +115,12 @@ namespace Inventario.Models{
             {
                 conexion.Open();
                 MySqlCommand command = new MySqlCommand();
-                command.CommandText = "UPDATE Lot SET lotNumber = ?lotNumber, dueDate = ?dueDate, creationDate = ?creationDate";
+                command.CommandText = "UPDATE Lot SET lotNumber = ?lotNumber, dueDate = ?dueDate, creationDate = ?creationDate WHERE idLot = ?idLot";
                 // to avoid sql injection
                 command.Parameters.Add("?idLot", MySqlDbType.Int32).Value = item.idLot; 
                 command.Parameters.Add("?lotNumber", MySqlDbType.String).Value = item.lotNumber; 
-                command.Parameters.Add("?dueDate", MySqlDbType.String).Value = item.dueDate; 
-                command.Parameters.Add("?creationDate", MySqlDbType.String).Value = item.creationDate; 
+                command.Parameters.Add("?dueDate", MySqlDbType.DateTime).Value = item.dueDate; 
+                command.Parameters.Add("?creationDate", MySqlDbType.DateTime).Value = item.creationDate; 
                 command.Connection = conexion;
                 try
                 {
