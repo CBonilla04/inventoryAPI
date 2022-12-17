@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\crist\\OneDrive\\Documentos\\BAC\\Inventario\\Inventario.csproj": {}
+    "C:\\Users\\crist\\OneDrive\\Documentos\\BAC\\Inventario\\Inventario.csproj": {}
   },
   "projects": {
-    "c:\\Users\\crist\\OneDrive\\Documentos\\BAC\\Inventario\\Inventario.csproj": {
+    "C:\\Users\\crist\\OneDrive\\Documentos\\BAC\\Inventario\\Inventario.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\crist\\OneDrive\\Documentos\\BAC\\Inventario\\Inventario.csproj",
+        "projectUniqueName": "C:\\Users\\crist\\OneDrive\\Documentos\\BAC\\Inventario\\Inventario.csproj",
         "projectName": "Inventario",
-        "projectPath": "c:\\Users\\crist\\OneDrive\\Documentos\\BAC\\Inventario\\Inventario.csproj",
+        "projectPath": "C:\\Users\\crist\\OneDrive\\Documentos\\BAC\\Inventario\\Inventario.csproj",
         "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\crist\\OneDrive\\Documentos\\BAC\\Inventario\\obj\\",
+        "outputPath": "C:\\Users\\crist\\OneDrive\\Documentos\\BAC\\Inventario\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,30 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.31, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0-preview5, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
